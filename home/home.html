@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="icon" href="../images/icon/j.png" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../navbar/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="bubbles-container">
+      <div class="bubble bubble-1"></div>
+      <div class="bubble bubble-2"></div>
+      <div class="bubble bubble-3"></div>
+      <div class="bubble bubble-4"></div>
+      <div class="bubble bubble-5"></div>
+      <div class="bubble bubble-6"></div>
+      <div class="bubble bubble-7"></div>
+      <div class="bubble bubble-8"></div>
+      <div class="bubble bubble-9"></div>
+      <div class="bubble bubble-10"></div>
+      <div class="bubble bubble-11"></div>
+      <div class="bubble bubble-12"></div>
+      <div class="bubble bubble-13"></div>
+      <div class="bubble bubble-14"></div>
+      <div class="bubble bubble-15"></div>
+    </div>
+    <div id="navbar"></div>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1>JUVO</h1>
+        <p>
+          A Fresh Taste, A New Experience
+          <br />
+          <span class="no-break">
+            Made with Real Fruits, Experience a New Level of Freshness in Every
+            Sip 🧡
+          </span>
+        </p>
+        <button
+          class="juice-btn"
+          onclick="location.href = '../juice-builder/juice-builder.html'"
+        >
+          <span class="liquid"></span>
+          <span class="text">Create Your Juice</span>
+          <div class="bubbles">
+            <span></span><span></span><span></span> <span></span><span></span
+            ><span></span>
+          </div>
+        </button>
+      </div>
+      <div class="hero-image">
+        <img src="../images/image-order/orange.png" alt="Juice" />
+      </div>
+    </section>
+
+    <!-- Customer Favorites -->
+    <section class="favorites-section">
+      <h2>Customer Favorites</h2>
+
+      <div class="slider-container">
+        <button class="slider-arrow prev-arrow" id="prevBtn">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div class="cards-slider-wrapper">
+          <div class="cards-slider">
+            <article class="card">
+              <header>
+                <h3>Strawberry Milk</h3>
+              </header>
+              <img
+                class="card-image"
+                src="../images/image-order/strawberry-milk.png"
+                alt="Strawberry Milk"
+              />
+              <div class="content">
+                <p>Fresh strawberries blended with smooth milk</p>
+              </div>
+              <div class="price">$5.00</div>
+              <button class="select-favorite-btn">Select</button>
+            </article>
+
+            <article class="card">
+              <header>
+                <h3>Coconut Milk</h3>
+              </header>
+              <img
+                class="card-image"
+                src="../images/image-order/coconut-milk.png"
+                alt="Coconut Milk"
+              />
+              <div class="content">
+                <p>Creamy coconut, pure refreshment</p>
+              </div>
+              <div class="price">$6.00</div>
+              <button class="select-favorite-btn">Select</button>
+            </article>
+
+            <article class="card">
+              <header>
+                <h3>Blueberry Coffee</h3>
+              </header>
+              <img
+                class="card-image"
+                src="../images/image-order/Blueberry-coffee.png"
+                alt="Blueberry Coffee"
+              />
+              <div class="content">
+                <p>A burst of berries in every sip</p>
+              </div>
+              <div class="price">$6.00</div>
+              <button class="select-favorite-btn">Select</button>
+            </article>
+
+            <article class="card">
+              <header>
+                <h3>Banana Coffee</h3>
+              </header>
+              <img
+                class="card-image"
+                src="../images/image-order/banana-coffee.png"
+                alt="Banana Coffee"
+              />
+              <div class="content">
+                <p>Energize your day with banana coffee</p>
+              </div>
+              <div class="price">$4.50</div>
+              <button class="select-favorite-btn">Select</button>
+            </article>
+          </div>
+        </div>
+
+        <button class="slider-arrow next-arrow" id="nextBtn">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <div class="slider-dots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <header>
+        <h2>About</h2>
+      </header>
+
+      <div class="about-content">
+        <p>
+          When I was a child, my grandmother had an orange tree in her yard.
+          Every summer I would go to her house and pick the fruits with my own
+          hands. I still remember after hours of playing in the garden, she
+          would squeeze fresh orange juice for me. That taste... it was like
+          sunshine poured into a glass 🧡
+        </p>
+      </div>
+    </section>
+
+    <div id="aboutModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close-btn" id="closeModalBtn">&times;</span>
+        <h2>My Story</h2>
+        <div class="about-content">
+          <p>
+            When I was a child, my grandmother had an orange tree in her yard.
+            Every summer I would go to her house and pick the fruits with my own
+            hands. I still remember after hours of playing in the garden, she
+            would squeeze fresh orange juice for me. That taste... it was like
+            sunshine poured into a glass 🧡
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="floating-cart" onclick="location.href = 'order/order.html'">
+      <i class="fas fa-shopping-cart cart-icon"></i>
+      <span class="cart-count">0</span>
+      <div class="cart-info">
+        <span class="cart-total">$0.00</span>
+      </div>
+    </div>
+
+    <script src="../navbar/script.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

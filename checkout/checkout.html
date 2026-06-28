@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - JUVO</title>
+    <link rel="icon" href="../photo/icon/j.png" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <button class="back-btn" onclick="history.back()">
+      <i class="fas fa-arrow-left"></i>
+      Back
+    </button>
+
+    <main class="checkout-page">
+      <div class="checkout-container">
+        <div class="checkout-content">
+          <div class="success-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+
+          <h1>Thank You!</h1>
+          <p class="thank-you-message">
+            Your order has been successfully placed
+          </p>
+
+          <div class="order-number">
+            <i class="fas fa-receipt"></i>
+            Order #: <span id="orderNumber">JUVO-2026-0001</span>
+          </div>
+
+          <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div id="checkout-items"></div>
+
+            <div class="checkout-total">
+              <span class="total-label">Total Amount:</span>
+              <span class="total-amount" id="checkout-total">0 $</span>
+            </div>
+          </div>
+
+          <div class="contact-info">
+            <p>
+              <i class="fas fa-clock"></i> Estimated delivery: 30-45 minutes
+            </p>
+            <p><i class="fas fa-phone"></i> For questions: +98 21 1234 5678</p>
+            <p><i class="fas fa-envelope"></i> support@juvo.com</p>
+          </div>
+
+          <div class="action-buttons">
+            <button class="print-btn" onclick="window.print()">
+              <i class="fas fa-print"></i>
+              Print Receipt
+            </button>
+            <button class="home-btn" onclick="location.href = '../index.html'">
+              <i class="fas fa-home"></i>
+              Back to Home
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

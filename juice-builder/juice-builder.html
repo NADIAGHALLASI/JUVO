@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juice Builder | JUVO</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="icon" href="../images/icon/j.png" />
+  </head>
+  <body>
+    <section class="builder-header">
+      <div class="header-wrapper">
+        <button
+          class="back-button"
+          onclick="window.location.href = '../index.html'"
+        >
+          <i class="fas fa-arrow-left"></i>
+          <span>Back</span>
+        </button>
+        <h1>Build Your Juice</h1>
+        <div style="width: 80px"></div>
+      </div>
+      <p class="subtitle">
+        Choose your base, add your favorites, create your perfect blend
+        <br />
+        <span class="selection-rule" id="selectionRule"
+          >🍎 Choose at least one and at most two fruits</span
+        >
+      </p>
+    </section>
+
+    <section class="juice-section">
+      <div class="juice-scroll-box">
+        <h2>Choose Your Fruits</h2>
+        <div class="vertical-cards" id="fruitsContainer">
+          <article class="addon-card" data-fruit="orange">
+            <div class="card-image-small">
+              <img
+                src="../images/image-builder/orange.png"
+                alt="Orange"
+                onerror="this.src = 'https://via.placeholder.com/60?text=🍊'"
+              />
+            </div>
+            <div class="card-info">
+              <div>
+                <h4>Orange</h4>
+                <p>Fresh and tangy</p>
+              </div>
+              <div class="card-footer">
+                <span class="price">+$2.50</span>
+                <button class="add-btn" data-name="Orange" data-price="2.50">
+                  + Add
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="addon-card" data-fruit="apple">
+            <div class="card-image-small">
+              <img
+                src="../images/image-builder/apple.png"
+                alt="Apple"
+                onerror="this.src = 'https://via.placeholder.com/60?text=🍎'"
+              />
+            </div>
+            <div class="card-info">
+              <div>
+                <h4>Apple</h4>
+                <p>Sweet and refreshing</p>
+              </div>
+              <div class="card-footer">
+                <span class="price">+$2.50</span>
+                <button class="add-btn" data-name="Apple" data-price="2.50">
+                  + Add
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="addon-card" data-fruit="mango">
+            <div class="card-image-small">
+              <img
+                src="../images/image-builder/mango.png"
+                alt="Mango"
+                onerror="this.src = 'https://via.placeholder.com/60?text=🥭'"
+              />
+            </div>
+            <div class="card-info">
+              <div>
+                <h4>Mango</h4>
+                <p>Creamy and tropical</p>
+              </div>
+              <div class="card-footer">
+                <span class="price">+$3.00</span>
+                <button class="add-btn" data-name="Mango" data-price="3.00">
+                  + Add
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="addon-card" data-fruit="strawberry">
+            <div class="card-image-small">
+              <img
+                src="../images/image-builder/strawberry.png"
+                alt="Strawberry"
+                onerror="this.src = 'https://via.placeholder.com/60?text=🍓'"
+              />
+            </div>
+            <div class="card-info">
+              <div>
+                <h4>Strawberry</h4>
+                <p>Sweet and aromatic</p>
+              </div>
+              <div class="card-footer">
+                <span class="price">+$3.00</span>
+                <button
+                  class="add-btn"
+                  data-name="Strawberry"
+                  data-price="3.00"
+                >
+                  + Add
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="addon-card" data-fruit="banana">
+            <div class="card-image-small">
+              <img
+                src="../images/image-builder/benana.png"
+                alt="Banana"
+                onerror="this.src = 'https://via.placeholder.com/60?text=🍌'"
+              />
+            </div>
+            <div class="card-info">
+              <div>
+                <h4>Banana</h4>
+                <p>Creamy and energy boost</p>
+              </div>
+              <div class="card-footer">
+                <span class="price">+$2.50</span>
+                <button class="add-btn" data-name="Banana" data-price="2.50">
+                  + Add
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="addon-card" data-fruit="blueberry">
+            <div class="card-image-small">
+              <img
+                src="../images/image-builder/blueberry.png"
+                alt="Blueberry"
+                onerror="this.src = 'https://via.placeholder.com/60?text=🫐'"
+              />
+            </div>
+            <div class="card-info">
+              <div>
+                <h4>Blueberry</h4>
+                <p>Rich in antioxidants</p>
+              </div>
+              <div class="card-footer">
+                <span class="price">+$4.00</span>
+                <button class="add-btn" data-name="Blueberry" data-price="4.00">
+                  + Add
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="addon-card" data-fruit="coconut">
+            <div class="card-image-small">
+              <img
+                src="../images/image-builder/coconut.png"
+                alt="Coconut"
+                onerror="this.src = 'https://via.placeholder.com/60?text=🥥'"
+              />
+            </div>
+            <div class="card-info">
+              <div>
+                <h4>Coconut</h4>
+                <p>Tropical and refreshing</p>
+              </div>
+              <div class="card-footer">
+                <span class="price">+$4.00</span>
+                <button class="add-btn" data-name="Coconut" data-price="4.00">
+                  + Add
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="addon-card" data-fruit="watermelon">
+            <div class="card-image-small">
+              <img
+                src="../images/image-builder/watermelone.png"
+                alt="Watermelon"
+                onerror="this.src = 'https://via.placeholder.com/60?text=🍉'"
+              />
+            </div>
+            <div class="card-info">
+              <div>
+                <h4>Watermelon</h4>
+                <p>Fresh and juicy</p>
+              </div>
+              <div class="card-footer">
+                <span class="price">+$2.00</span>
+                <button
+                  class="add-btn"
+                  data-name="Watermelon"
+                  data-price="2.00"
+                >
+                  + Add
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="base-type-section">
+      <h2>Choose Your Base Type</h2>
+      <div class="base-type-cards">
+        <article class="base-type-card">
+          <div class="base-icon">🥛</div>
+          <h3>Milk</h3>
+          <p>Creamy and smooth, perfect for milkshakes</p>
+          <div class="price">+$2.00</div>
+          <button
+            class="select-base-btn"
+            data-base="milk"
+            data-price="2.00"
+            data-name="Milk Base"
+          >
+            Select
+          </button>
+        </article>
+
+        <article class="base-type-card">
+          <div class="base-icon">☕</div>
+          <h3>Coffee</h3>
+          <p>Rich and bold, for energy boost</p>
+          <div class="price">+$2.00</div>
+          <button
+            class="select-base-btn"
+            data-base="coffee"
+            data-price="2.00"
+            data-name="Coffee Base"
+          >
+            Select
+          </button>
+        </article>
+
+        <article class="base-type-card">
+          <div class="base-icon">💧</div>
+          <h3>No Base</h3>
+          <p>Just pure fruit juice, no additives</p>
+          <div class="price">+$0.00</div>
+          <button
+            class="select-base-btn active"
+            data-base="none"
+            data-price="0"
+            data-name="No Base"
+          >
+            Selected
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <div class="btn-next">
+      <button class="next-btn" id="nextBtn">
+        Next <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+
+    <div class="floating-cart">
+      <i class="fas fa-shopping-cart cart-icon"></i>
+      <span class="cart-count">0</span>
+      <div class="cart-info">
+        <span class="cart-total">$0.00</span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
