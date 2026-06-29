@@ -124,7 +124,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     localStorage.setItem("juvo_login_time", new Date().toISOString());
 
     alert(`✅ Welcome ${username}! Login successful.`);
-    window.location.href = "../home/home.html";
+    window.location.href = "home/home.html";
 
     usernameInput.value = "";
     verificationCodeInput.value = "";
@@ -144,6 +144,7 @@ function continueAsGuest() {
   localStorage.setItem("juvo_guest", "true");
   localStorage.setItem("juvo_login_time", new Date().toISOString());
   alert("✅ Continuing as Guest");
+  window.location.href = "home/home.html";
 }
 
 usernameInput.focus();
